@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Two, Three</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap" rel="stylesheet">
+
+    <style>
+        * {margin: 0;padding: 0;}
+
+        body {background-image: url("images/spiral.jpg");background-size: 100%;background-attachment: fixed;color: white;}
+
+        header {text-align: center;background-color: rgb(32 32 103 / 40%);padding: 10px 0px;font-family: 'Lobster Two', cursive;}
+
+        button {position: absolute; top: 10px; right: 20px; padding: 5px 10px; border-radius: 14px; border: 4px solid yellowgreen;
+            color: white; font-size: 15px; background-color: rgb(32 32 103 / 40%);}
+
+        .container {width: 700px;margin: auto;padding-top: 80px;text-align: justify;}
+    </style>
+
+    <script>
+        $(function () {
+            $("button").click(function () {
+                $('H1').text("HELLO, GOOD TO SEE YOU!")
+                $('button').text('Header Style Changed');
+                $("header").css({
+                    "color": "yellow",
+                    "fontSize": "30px",
+                    "fontFamily": "Lobster Two', cursive",
+                    "backgroundColor": "#922b2b66"
+                });
+            });
+
+            $('p').mouseenter(function () {
+                var pText = $(this).text()
+                $('p').empty();
+                $('p').append('<img src="images/spiral.jpg" height="100%" width="100%">');
+
+                $("p").mouseleave(function(){
+                $('p').text(pText);
+                alert('Outside From Paragraph');
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1><span>WELCOME TO THE WEBSITE</span></h1>
+    </header>
+    <button> Style Header Text </button>
+    <div class="container">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum non provident facilis quo quia sunt
+            doloribus et quae illum! Repellendus eos quod soluta quaerat nihil. Quod possimus fugit dolorum voluptate
+            dignissimos excepturi exercitationem incidunt nihil placeat facere et autem delectus velit, illum quaerat
+            veritatis minima porro sed eum? Saepe quo ab magni tempore, temporibus ducimus nesciunt odit enim illo,
+            recusandae doloribus dolorum vel minima expedita repellendus omnis rem quia corrupti aliquam eligendi
+            accusamus nulla incidunt labore blanditiis.
+        </p>
+    </div>
+</body>
+</html>
